@@ -2,9 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Ensuring the body takes up full height and no margin */
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +14,50 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+
+/* Styling the SearchResults container */
+#SearchResults {
+  width: 50%;            /* Takes up 50% of the page width */
+  height: 100%;          /* Takes up the full height of the page */
+  margin: 0 auto;        /* Center the container horizontally */
+  display: flex;         /* Use Flexbox for centering the content inside */
+  justify-content: center; /* Center horizontally */
+  align-items: center;   /* Center vertically */
+  background-color: #f4f4f4; /* Optional background color */
+  border-radius: 8px;    /* Optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+}
+
+/* Optional content inside the container */
+#SearchResults p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+
+
+
+.list-group {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-group-item {
+  padding: 10px;
+  margin: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #e0e0e0;
+}
+
+.list-group-item.active {
+  background-color: #007bff;
   color: white;
+  border-color: #007bff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
